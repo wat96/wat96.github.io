@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="center">
+        <img id="bohdi" style="-webkit-user-select: none;margin: auto;cursor: zoom-in;" src="https://bohdi-perrin.s3.us-east-2.amazonaws.com/DSC_0010.JPG" width="665" height="443">
+    </div>
+    <div class="center" id="linker">
+        <div class="center" id="link"></div>
+        <div id="loading">Loading...</div>
+    <div>
+    <style>
+        body {
+            background-color: gray;
+        }
+        .center {
+          margin: auto;
+          width: 50%;
+          padding: 10px;
+        }
+        #loading {
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #link {
+            text-align: center;
+            width: 100% !important;
+        }
+    </style>
+    <script>
+        let imgIds = [ "0007", "0008", "0009", "0010", "0011", "0012", "0020", "0025", "0027", "0029", "0030", "0031", "0032", "0033", "0034", "0035", "0036", "0037", "0038", "0039", "0040", "0041", "0042", "0043", "0044", "0045", "0051", "0052", "0053", "0054", "0055", "0056", "0057", "0058", "0059", "0060", "0061", "0062", "0063", "0064", "0065", "0066", "0067", "0068", "0069", "0070", "0071", "0072", "0073", "0074", "0075", "0076", "0077", "0078", "0079", "0080", "0081", "0082", "0083", "0084", "0085", "0086", "0087", "0088", "0089", "0090", "0091", "0092", "0093", "0100", "0101", "0102", "0103", "0104", "0105", "0106", "0107", "0923", "0936", "0937", "0945", "0947", "0965", "0977", "0981", "0983", "0984", "0985", "1001", "1002", "1016", "1018", "1019", "1020", "1021", "1022", "1023", "1024", "1025", "1026", "1027", "1028", "1029", "1030", "1031", "1032", "1039", "1040", "1041", "1042", "1043", "1044", "1045", "1046", "1047", "1048", "1049", "1050", "1051", "1052", "1053", "1054", "1055", "1056", "1057", "1058", "1059", "1060", "1061", "1062", "1063", "1064", "1065", "1066", "1067", "1068", "1069", "1070", "1071", "1072", "1073", "1074", "1075", "1077", "1078", "1079", "1080", "1081", "1082", "1083", "1084", "1085", "1086", "1087", "1088", "1089", "1090", "1091", "1092", "1093", "1094", "1104", "1105", "1106", "1107", "1112", "1113", "1114", "1117", "1118", "1119", "1120", "1121", "1122", "1123", "1124", "1125", "1126", "1127", "1128", "1129", "1130", "1131", "1132", "1133", "1135", "1136", "1137", "1138", "1139", "1171", "1172", "1173", "1178", "1179", "1195", "1253", "1254", "1259", "1286" ]
+
+        let img_ind = 0
+
+        const generateBbyString = () => {
+            if (img_ind < 0) {
+                img_ind = 0
+            } else if (img_ind > imgIds.length - 1) {
+                img_ind = imgIds.length - 1
+            }
+            let idString = imgIds[img_ind]
+
+            return `https://bohdi-perrin.s3.us-east-2.amazonaws.com/DSC_${idString}.JPG`
+        }
+
+        document.addEventListener('keyup', (e) => {
+          if (e.code === "ArrowRight") img_ind += 1
+          else if (e.code === "ArrowLeft") img_ind -= 1
+
+          let linkString = generateBbyString()
+          $('#loading').show()
+          $('#bohdi').attr("src", linkString)
+          $('#link').html(`link: <a>${linkString}</a>`)
+        })
+        $('#bohdi').on('load', function() {
+            $('#loading').hide()
+        })
+    </script>
+</body>
+</html>
