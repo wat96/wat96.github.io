@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dalle-playground/precache-manifest.cd0e22799f13f039be4ab6b4f0dca68d.js"
+  "/dalle-playground/precache-manifest.cf484a7c3516b3c12f999737ff5e2b71.js"
 );
 
 self.addEventListener('message', (event) => {
