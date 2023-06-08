@@ -1,11 +1,14 @@
 import React from 'react';
-import TypingAnimation from './components/TypingAnimation';
+import Marquee from './components/Marquee';
+import ParticlesBackground from './components/ParticlesBackground';
+import './App.css'
 
 function App() {
   return (
-    <>
-      <TypingAnimation />
-    </>
+    <div className="App">
+      <ParticlesBackground />
+      <Marquee />
+    </div>
   );
 }
 

@@ -1,0 +1,43 @@
+.typingAnimation {
+    white-space: pre-line;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.typingAnimation.top-header {
+    font-size: 80px;
+    display: block;
+}
+.typingAnimation.name-header {
+    font-size: 40px;
+    display: block;
+}
+.typingAnimation.activity-header {
+    font-size: 40px;
+    vertical-align: center;
+}
+
+.custom-type-animation-cursor::after {
+  content: '|';
+  animation: cursor 1.1s infinite step-start;
+}
+
+@keyframes cursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+.header-btn-holder {
+    display: flex;
+    align-content: center;
+    width: 100%;
+}
+
+.header-btn {
+    height: 5vh;
+    width: 100%;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    color: rgb(170, 170, 200) !important;
+}
