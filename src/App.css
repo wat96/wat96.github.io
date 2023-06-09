@@ -18,13 +18,22 @@ body {
 }
 
 .App {
+    margin-top: 5%;
     text-align: center;
     color: white;
-    min-width: 70vw;
+    width: 70vw;
     /* height: 100vw; */
-    border-style: solid;
-    border-color: rgb(120, 122, 146);
-    border-width: 0px 1px;
+    
+}
+
+.main-app {
+  /* border-style: solid;
+  border-color: rgb(120, 122, 146);
+  border-width: 0px 1px; */
+}
+
+.particles-canvas {
+  z-index: -99 !important;
 }
 
 .y1-code-text {
@@ -41,4 +50,8 @@ body {
 
 .b1-code-text {
   color: rgb(150, 190, 190);
+}
+
+.b2-code-text {
+  color: rgb(180, 210, 210);
 }

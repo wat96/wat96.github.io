@@ -23,7 +23,7 @@ function Marquee() {
     }
 
     return (
-        <>
+        <div className="marquee">
             <TypeAnimation
             sequence={[
                 'Welcome 👋', // Types 'One'
@@ -91,7 +91,7 @@ function Marquee() {
             wrapper="span"
             /> }
 
-            { animStates.fifth && <FadeIn 
+            { false && animStates.fifth && <FadeIn 
                 childClassName="header-btn"
                 className="header-btn-holder">
                 <Button className="header-btn b1-code-text" variant="text">
@@ -101,7 +101,7 @@ function Marquee() {
                 Play
                 </Button>
             </FadeIn> }
-        </>
+        </div>
     );
 }
 

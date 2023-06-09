@@ -129,6 +129,7 @@ const ParticlesBackground = () => {
             id="tsparticles"
             init={particlesInit}
             loaded={particlesLoaded}
+            className="particles-canvas"
             options={particlesOpts}
         />
     );

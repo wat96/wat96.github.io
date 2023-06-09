@@ -1,0 +1,25 @@
+.footer {
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-style: solid;
+    border-color: rgb(120, 122, 146);
+    border-width: 1px 0px 0px 0px;
+
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    width: 45%;
+}
+
+a.footer-el:hover {
+    cursor: pointer;
+}
+
+.footer-el {
+    height: 100% !important;
+    width: 100% !important;
+    flex-direction: row !important;
+    color: rgb(120, 122, 146);
+}
