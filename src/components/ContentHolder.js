@@ -9,7 +9,7 @@ function ContentHolder() {
             <div className="content-header y1-code-text">About Me</div>
             <div className='content-body b2-code-text'>I'm a software engineer 👨🏻‍💻‍ and musician 🎹 based in LA.
             I studied computer science at MIT and I've gotten to live/work in the Bay Area, Seattle, and LA.<br/>
-            If you want to take a closer look, here's my <a href="/resume.pdf">resume</a>.</div>
+            If you want to take a closer look, here's my <a href="/Resume.pdf">resume</a>.</div>
             <br/>
             <br/>
 
